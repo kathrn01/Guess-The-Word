@@ -1,23 +1,28 @@
+import React, { useState } from 'react'; 
 import logo from './logo.svg';
+import GameBoard from "./components/GameBoard"
+import keyboardData from "./keyboardData"
+import Key from "./components/Key"
 import './App.css';
 
 function App() {
+  const [keys, setKeys] = useState(keyboardData);
+  const keyElements = keyboardData.map((key) => {
+    return <Key active={key.active} letter={key.letter} />
+  });
+
+  function handleEntry() {
+  	
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="game">
+	<GameBoard/>
+	<div className="keyboard">
+	  {keyElements}
+	  <button className="enter" onClick={handleEntry}>enter</button>
+	  <button className="delete">delete</button>
+	</div>
     </div>
   );
 }
