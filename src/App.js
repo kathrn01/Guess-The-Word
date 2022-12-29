@@ -1,23 +1,30 @@
 import React, { useState } from 'react'; 
-import logo from './logo.svg';
-import GameBoard from "./components/GameBoard"
 import keyboardData from "./keyboardData"
 import Key from "./components/Key"
-import './App.css';
+import Guess from './components/Guess'
 
-function App() {
+export default function App() {
+  const numGuesses = 5;
+  const numLettersPerGuess = 4;
+
   const [keys, setKeys] = useState(keyboardData);
   const keyElements = keyboardData.map((key) => {
     return <Key active={key.active} letter={key.letter} />
   });
+
+  const guesses = [];
+  for(var i=0; i<numGuesses; i++) { guesses.push( <Guess numLetters={numLettersPerGuess} />) }
 
   function handleEntry() {
   	
   }
 
   return (
-    <div className="game">
-	<GameBoard/>
+    <div className="game">	
+	<div className="gameboard">
+		{guesses}
+	</div>
+	
 	<div className="keyboard">
 	  {keyElements}
 	  <button className="enter" onClick={handleEntry}>enter</button>
@@ -27,4 +34,3 @@ function App() {
   );
 }
 
-export default App;

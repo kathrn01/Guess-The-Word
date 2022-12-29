@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-export default function GameBoardTile(props) {
+export default function GuessTile(props) {
 	const styles = {
 		backgroundColor: props.status
 	}
