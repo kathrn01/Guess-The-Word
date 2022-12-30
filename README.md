@@ -1,1 +1,0 @@
-# wordsy-app
