@@ -1,24 +1,29 @@
 export default [
 	{
-		id: "00",
-		status: "green",
-		letter: "A"
-	},
-	{
-		id: "01",
+		id: 0,
+		row: 0,
 		status: "white",
-		letter: "B"
+		letter: "?"
 	},
 	{
-		id: "02",
-		status: "red",
-		letter: "C"
+		id: 1,
+		row: 0,
+		status: "white",
+		letter: "?"
 	},
 	{
-		id: "03",
-		status: "yellow",
-		letter: "D"
+		id: 2,
+		row: 0,
+		status: "white",
+		letter: "?"
 	},
+	{
+		id: 3,
+		row: 0,
+		status: "white",
+		letter: "?"
+	}
+/*
 	{
 		id: "10",
 		status: "white",
@@ -99,4 +104,5 @@ export default [
 		status: "white",
 		letter: ""
 	}
+*/
 ]

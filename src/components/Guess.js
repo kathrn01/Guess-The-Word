@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GuessTile from './GuessTile'
+import boardData from '../boardData'
 
 export default function Guess(props) {
-	const tiles = [];	
-	 for(var i=0; i < props.numLetters; i++) { tiles.push( <GuessTile status="white" letter="" /> )}
+	const [tiles, setTiles] = useState(boardData);
+	
+	const tileElements = boardData.map(tile => (
+		<GuessTile status={tile.status} letter={tile.letter} row={props.row} />
+	))
+
 	return (
 		<div className="guess">
-			{tiles}
+			{tileElements}
 		</div>
 	);
 }

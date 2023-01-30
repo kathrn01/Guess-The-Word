@@ -5,7 +5,7 @@ export default function Key(props) {
 		backGroundColor: props.active ? "white" : "red"
 	}
 	return(
-		<div style={styles} className="key">
+		<div style={styles} className="key" onClick={() => props.handleClick(props.letter)}>
 			{props.letter}
 		</div>
 	);	
