@@ -69,12 +69,14 @@ button.key.guess {
 	background: #D3D3D3;
 	width: 150px;
 	height: 30px;
+	border: 1px solid black;
 }
 
 button.key.replay {
 	background: #d42f2f;
 	width: 150px;
 	height: 30px;
+	border: 1px solid black;
 }
 
 .key:hover {
