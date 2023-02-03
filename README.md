@@ -17,7 +17,7 @@ If the letter doesn't exist in the secret word, the letter tile will turn red, a
 ![Watch demo](https://user-images.githubusercontent.com/84199502/216685035-3968f093-e8bf-4dc3-8025-971dff303dc2.mov)
 
 ## Packages and Major Source Code Organization 
-### The code is organized within src folder 'App.js' containing most logic and the main app component, 'index.css' containing styles for the game <br>
+The code is organized within src folder 'App.js' containing most logic and the main app component, 'index.css' containing styles for the game <br>
 'data', containing keyboard, gameboard, and word data, and 'components' containing React components for Tiles and Keys.<br>
 I will be adding tests soon.
 
