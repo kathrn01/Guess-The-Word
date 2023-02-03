@@ -10,10 +10,8 @@ If the letter doesn't exist in the secret word, the letter tile will turn red, a
 
 ## Examples
 | Start | During | End |
-| ---- | ---- | ---- |
-| ![before-game](https://user-images.githubusercontent.com/84199502/216684850-d8881c88-d3f2-4549-8c17-0d7c863100b4.png)
- | ! [during-game](https://user-images.githubusercontent.com/84199502/216684890-12690827-03cb-4677-9378-24d6952d3f26.png)
-| ![after-game](https://user-images.githubusercontent.com/84199502/216684920-bf16898d-8e75-4658-92f5-e2ac0b0fac79.png) |
+| ---- | ---- | ---- | 
+| ![before-game](https://user-images.githubusercontent.com/84199502/216684850-d8881c88-d3f2-4549-8c17-0d7c863100b4.png) | ! [during-game](https://user-images.githubusercontent.com/84199502/216684890-12690827-03cb-4677-9378-24d6952d3f26.png) | ![after-game](https://user-images.githubusercontent.com/84199502/216684920-bf16898d-8e75-4658-92f5-e2ac0b0fac79.png) |
 
 ###Video demo:
 https://user-images.githubusercontent.com/84199502/216685035-3968f093-e8bf-4dc3-8025-971dff303dc2.mov
