@@ -1,4 +1,4 @@
-# Wordsy 
+# React App: Wordsy Game 
 ## About Wordsy
 Wordsy is a game inspired by the popular word guessing game Wordle. However, in Wordsy, users only have four guesses, and words are four letters.<br>
 I hope to soon implement a points system, user statistics (database), and make use of an API for words.
