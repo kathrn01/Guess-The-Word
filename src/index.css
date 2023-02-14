@@ -88,6 +88,7 @@ button.key.replay {
 	width: 150px;
 	height: 30px;
 	border: 1px solid black;
+	justify-self: center;
 }
 
 .key:hover {

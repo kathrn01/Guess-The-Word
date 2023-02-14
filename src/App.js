@@ -1,19 +1,30 @@
 import React, {useState, useEffect, useRef} from 'react'; 
 import keyboardData from "./data/keyboardData"
 import Key from "./components/Key"
-import words from "./data/words.js"
 import GuessTile from './components/GuessTile'
 import boardData from './data/boardData'
 
 export default function App() {
+  const [data, setData] = useState([{}]);  
+ 
+  useEffect(() => {
+	fetch("/api").then(
+		response => response.json()
+	).then(
+		data => {
+			setData(data.wordData)
+		}
+	)
+  }, [])
+
   const [currCol, setCurrCol] = useState(0); //current column (updates as user adds or deletes a letter from a guess) 
   const [currRow, setCurrRow] = useState(0); //current row (updates after user submits a guess) -- goes to next row/guess
-  let word = useRef(words.at(Math.floor(Math.random() * words.length)).word); //random word from list is the word that user will try to guess 
   const guess = useRef(""); //the most recent guess the user submitted
   const wrongLetters = useRef(""); //letters incorrectly guessed (used to update the keyboard)
   const [endOfGame, setEndOfGame] = useState(false); //becomes true if either user runs out of guesses, or guesses word correctly
   const [keys, setKeys] = useState(keyboardData); //the keyboard keys
   const [tiles, setTiles] = useState(boardData); //the tiles that make up the guesses/game
+  let word = useRef("WORD");
 
   //game tiles components
   const tileElements = tiles.map(tile => (
@@ -121,6 +132,7 @@ export default function App() {
 			return (wrongLetters.current.includes(key.letter) ? {...key, background: "#eb5146"} : key)
 		})	
 	})
+	console.log("current word: "+word.current);
   }, [currRow])
 
   //reset all values and set a new word to be guessed
@@ -135,12 +147,12 @@ export default function App() {
 	
 
 	//choose a new word from the words list
-	let randomWordIndex = Math.floor(Math.random() * words.length)
-	word.current = words.at(randomWordIndex).word;
+	word.current = data[Math.floor(Math.random() * 20)];
   }
 
   return (
     <div className="game">	
+	
 	<div className="gameboard">
 		{tileElements}
 	</div>
